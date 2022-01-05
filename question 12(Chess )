@@ -1,0 +1,42 @@
+// { Driver Code Starts
+
+#include <bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+class Solution {
+  public:
+    long long squaresInChessBoard(long long N)
+    {
+        //if you have given a chessboard of size n*n
+        //it means that 1x1 size of chessboard exist n*n number of times
+        //2x2 size of chessboard exist n-1*n-1 number of times
+        //n*n size of chessboard exist 1*1 times
+        //after that we have to sum all the squares of chess board which will be our final answeer
+        //time complexcity of this solution will be o(n)
+        //this solution of time complexcity is o(n)
+    //     long long  ans=0;
+    //     for(long long i=1;i<=N;i++)
+    //     ans+=(i*i);
+    //   return ans;
+    //solution of the question of o(1)
+    //the formula for sum of1*1+2*2+3*3......
+    return (long long )((N)*(N+1)*(2*N+1)/6);
+    }
+};
+
+// { Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long N;
+        
+        cin>>N;
+
+        Solution ob;
+        cout << ob.squaresInChessBoard(N) << endl;
+    }
+    return 0;
+}  // } Driver Code Ends
